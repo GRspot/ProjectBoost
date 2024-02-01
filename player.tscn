@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf4rnh76i4xod"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_5am13"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kuw4o"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_tr87c"]
+
+[node name="Player" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.758335, -0.914975, 18.7147)
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+max_contacts_reported = 10
+contact_monitor = true
+linear_damp = 1.0
+angular_damp = 1.0
+script = ExtResource("1_5am13")
+torque_trust = 85.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CylinderMesh_kuw4o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_tr87c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
