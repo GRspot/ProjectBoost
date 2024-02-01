@@ -38,6 +38,7 @@ func crash_sequences() -> void:
 func complete_levet(next_level_file: String) ->void:
 	print("You win!")
 	set_process(false)
+	is_transitioning = true
 	var tween = create_tween()
 	tween.tween_interval(1.0)
 	tween.tween_callback(get_tree().change_scene_to_file.bind(next_level_file))
