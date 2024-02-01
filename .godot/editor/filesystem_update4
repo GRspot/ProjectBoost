@@ -1,6 +1,6 @@
+res://player.tscn
+res://Player.gd
 res://level.tscn
 res://level_3.tscn
-res://Player.gd
-res://moving_hazard.tscn
-res://moving_hazard.gd
 res://level_4.tscn
+res://moving_hazard.tscn

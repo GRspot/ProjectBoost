@@ -8,6 +8,10 @@ extends RigidBody3D
 
 var is_transitioning: bool = false
 
+@onready var explosion_audio: AudioStreamPlayer = $ExplosionAudio
+@onready var sucess_audio: AudioStreamPlayer = $SucessAudio
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Boost"):
@@ -29,18 +33,20 @@ func _on_body_entered(body: Node) -> void:
 			
 func crash_sequences() -> void:
 	print("BOOM!")
+	explosion_audio.play()
 	set_process(false)
 	is_transitioning = true
 	var tween = create_tween()
-	tween.tween_interval(1.0) 
+	tween.tween_interval(2.5) 
 	tween.tween_callback(get_tree().reload_current_scene)
-
+	
 func complete_levet(next_level_file: String) ->void:
 	print("You win!")
+	sucess_audio.play()
 	set_process(false)
 	is_transitioning = true
 	var tween = create_tween()
-	tween.tween_interval(1.0)
+	tween.tween_interval(1.5)
 	tween.tween_callback(get_tree().change_scene_to_file.bind(next_level_file))
 	
 	

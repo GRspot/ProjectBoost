@@ -1,10 +1,14 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1706772906
+::res://::1706789817
 icon.svg::CompressedTexture2D::3672499001104651772::1706243098::1706772624::1::::<><>::
 Landing pad.gd::GDScript::-1::1706674412::0::1::::<>CSGBox3D<>::
-level.tscn::PackedScene::1674114476439251434::1706772906::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
+level.tscn::PackedScene::1674114476439251434::1706788164::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
 level_2.tscn::PackedScene::7441003306569028374::1706770387::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
-level_3.tscn::PackedScene::6968049675858199511::1706772906::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
+level_3.tscn::PackedScene::6968049675858199511::1706788164::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
+level_4.tscn::PackedScene::657342681589510258::1706788207::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn<>uid://cg10vyvak1sfm::::res://moving_hazard.tscn
+moving_hazard.gd::GDScript::-1::1706788073::0::1::::<>AnimatableBody3D<>::
+moving_hazard.tscn::PackedScene::5249204970326817454::1706788164::0::1::::<><>::res://moving_hazard.gd
 Player.gd::GDScript::-1::1706772905::0::1::::<>RigidBody3D<>::
 player.tscn::PackedScene::5184708363159439107::1706770387::0::1::::<><>::res://Player.gd
-level_4.tscn::PackedScene::657342681589510258::1706773173::0::1::::<><>::res://Landing pad.gd<>uid://cf4rnh76i4xod::::res://player.tscn
+SFX - Death Explosion.ogg::AudioStreamOggVorbis::6091035335128221067::1706789780::1706789818::1::::<><>::
+SFX - Success.ogg::AudioStreamOggVorbis::8544365983336739323::1706789780::1706789818::1::::<><>::
