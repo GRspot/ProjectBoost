@@ -19,6 +19,8 @@ func _process(delta: float) -> void:
 		apply_central_force(basis.y  * delta * thrust)
 		if rocket_audio.playing == false:
 			rocket_audio.play()
+	else:
+		rocket_audio.stop()
 		
 		
 	if Input.is_action_pressed("Rotate_left"):
