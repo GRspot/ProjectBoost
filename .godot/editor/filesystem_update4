@@ -3,4 +3,4 @@ res://level_3.tscn
 res://level_4.tscn
 res://moving_hazard.tscn
 res://player.tscn
-res://Player.gd
+res://booster_particles.tscn

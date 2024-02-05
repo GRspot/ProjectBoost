@@ -11,16 +11,33 @@ var is_transitioning: bool = false
 @onready var explosion_audio: AudioStreamPlayer = $ExplosionAudio
 @onready var sucess_audio: AudioStreamPlayer = $SucessAudio
 @onready var rocket_audio: AudioStreamPlayer3D = $RocketAudio
+@onready var booster_particles: GPUParticles3D = $BoosterParticles
+@onready var right_booster_particles: GPUParticles3D = $RightBoosterParticles
+@onready var left_booster_particles: GPUParticles3D = $LeftBoosterParticles
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("Boost"):
 		apply_central_force(basis.y  * delta * thrust)
+		booster_particles.emitting = true
 		if rocket_audio.playing == false:
 			rocket_audio.play()
 	else:
 		rocket_audio.stop()
+		booster_particles.emitting = false	
+		
+	if Input.is_action_pressed("Rotate_left"):
+		apply_torque(Vector3(0.0, 0.0, torque_trust *delta))
+		right_booster_particles.emitting = true
+	else:
+		right_booster_particles.emitting = false
+	
+	if Input.is_action_pressed("Rotate_right"):
+		apply_torque(Vector3(0.0, 0.0, -torque_trust * delta))
+		left_booster_particles.emitting = true
+	else:
+		left_booster_particles.emitting = false
 		
 		
 	if Input.is_action_pressed("Rotate_left"):
